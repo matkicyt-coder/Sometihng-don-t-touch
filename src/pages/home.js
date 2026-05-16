@@ -1,15 +1,11 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import React from 'react';
 
-export default function Home() {
-  const router = useRouter();
+const Home = () => {
+  return (
+    <div>
+      <h1>Welcome to the Home Page</h1>
+    </div>
+  );
+};
 
-  useEffect(() => {
-    const username = localStorage.getItem('username');
-    if (!username) {
-      router.push('/signup');
-    }
-  }, []);
-
-  return <div>Welcome to the home page!</div>;
-}
+export default Home;
